@@ -1,2 +1,2 @@
 # godotproject
-pull
+push
