@@ -19,6 +19,7 @@ config/icon="uid://conxi0ejnrohs"
 [autoload]
 
 Backsound="*res://backsound.tscn"
+Global="*res://global.gd"
 
 [display]
 

@@ -1,12 +1,13 @@
-[gd_scene load_steps=26 format=3 uid="uid://4v0bxobq1yjp"]
+[gd_scene load_steps=27 format=3 uid="uid://4v0bxobq1yjp"]
 
 [ext_resource type="Script" uid="uid://dttcax0swasvs" path="res://main_menu.gd" id="1_j3jwc"]
-[ext_resource type="Texture2D" uid="uid://dyaghlpxa838g" path="res://FreeGUI/png/BG.png" id="2_j3jwc"]
+[ext_resource type="Texture2D" uid="uid://c1awabv2y8466" path="res://bggray.png" id="2_holw3"]
 [ext_resource type="Texture2D" uid="uid://s1suf4xyt0p3" path="res://FreeGUI/png/Button.png" id="3_holw3"]
+[ext_resource type="Script" uid="uid://bwhp6n7jtlw2" path="res://panel.gd" id="3_ikcl0"]
 [ext_resource type="FontFile" uid="uid://cxh88to8mitlu" path="res://brady_bunch/BradBunR.ttf" id="3_mue8r"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j3jwc"]
-texture = ExtResource("2_j3jwc")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ikcl0"]
+texture = ExtResource("2_holw3")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ikcl0"]
 atlas = ExtResource("3_holw3")
@@ -91,7 +92,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_j3jwc")
+theme_override_styles/panel = SubResource("StyleBoxTexture_ikcl0")
+script = ExtResource("3_ikcl0")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

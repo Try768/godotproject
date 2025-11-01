@@ -1,14 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://ct7kqo4je8hmy"]
+[gd_scene load_steps=16 format=3 uid="uid://ct7kqo4je8hmy"]
 
-[ext_resource type="Texture2D" uid="uid://dyaghlpxa838g" path="res://FreeGUI/png/BG.png" id="1_l82yo"]
 [ext_resource type="Script" uid="uid://by5ru8111c1hr" path="res://option.gd" id="1_uhspr"]
+[ext_resource type="Texture2D" uid="uid://c1awabv2y8466" path="res://bggray.png" id="2_piv12"]
 [ext_resource type="Texture2D" uid="uid://do47lnvlxitg4" path="res://FreeGUI/png/Window.png" id="2_uhspr"]
 [ext_resource type="FontFile" uid="uid://cxh88to8mitlu" path="res://brady_bunch/BradBunR.ttf" id="3_c6ia3"]
+[ext_resource type="Script" uid="uid://cjxgtrbaccgbk" path="res://panel2.gd" id="3_piv12"]
 [ext_resource type="Texture2D" uid="uid://s1suf4xyt0p3" path="res://FreeGUI/png/Button.png" id="4_v4yl2"]
 [ext_resource type="PackedScene" uid="uid://fjjrd1pceqkw" path="res://music-button.tscn" id="6_c6ia3"]
+[ext_resource type="Script" uid="uid://bsmyboeas7w5i" path="res://script/button.gd" id="8_piv12"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_piv12"]
-texture = ExtResource("1_l82yo")
+texture = ExtResource("2_piv12")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4nvuw"]
 atlas = ExtResource("2_uhspr")
@@ -50,6 +52,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_piv12")
+script = ExtResource("3_piv12")
 
 [node name="TextureRect" type="TextureRect" parent="Panel"]
 layout_mode = 1
@@ -88,6 +91,17 @@ theme_override_font_sizes/font_size = 100
 text = "Musik"
 horizontal_alignment = 1
 
+[node name="Label2" type="Label" parent="Panel/Label"]
+layout_mode = 0
+offset_left = -323.0
+offset_top = 548.0
+offset_right = 125.0
+offset_bottom = 699.0
+theme_override_fonts/font = ExtResource("3_c6ia3")
+theme_override_font_sizes/font_size = 100
+text = "bg color"
+horizontal_alignment = 1
+
 [node name="Home" type="Button" parent="."]
 layout_mode = 0
 offset_right = 181.0
@@ -111,5 +125,22 @@ offset_bottom = 94.5
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="TextureButton2" parent="." instance=ExtResource("6_c6ia3")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.36400002
+anchor_top = 0.5
+anchor_right = 0.36400002
+anchor_bottom = 0.5
+offset_left = -91.60004
+offset_top = -91.0
+offset_right = 89.39996
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8_piv12")
+
 [connection signal="pressed" from="Home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_music_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_bg_color_pressed"]
+[connection signal="pressed" from="TextureButton2" to="Panel" method="_on_bgcolor_pressed"]

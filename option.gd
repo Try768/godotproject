@@ -24,3 +24,8 @@ func _on_music_pressed() -> void:
 	else:
 		Backsound.play()
 		music_on = true
+
+
+func _on_bg_color_pressed() -> void:
+	Global.ubah_bgwarna()
+	# Replace with function body.
