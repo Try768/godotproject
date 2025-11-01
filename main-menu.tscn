@@ -39,6 +39,7 @@ shadow_offset = Vector2(0, 3)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gvk52"]
 
 [node name="Main-menu" type="Control"]
+clip_contents = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
